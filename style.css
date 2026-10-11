@@ -1,12 +1,10 @@
-
-
 :root {
-  --ink: #16181d;        
-  --ink-2: #22262e;     
-  --gold: #c9a24a;       
-  --gold-dark: #8a6616;  
+  --ink: #16181d;
+  --ink-2: #22262e;
+  --gold: #c9a24a;
+  --gold-dark: #8a6616;
   --paper: #ffffff;
-  --surface: #f3f3f1;    
+  --surface: #f3f3f1;
   --line: #e2e2de;
   --text: #23262d;
   --muted: #5d626b;
@@ -44,7 +42,6 @@ textarea:focus-visible,
   outline: 2px solid var(--gold);
   outline-offset: 3px;
 }
-
 
 .site-header {
   position: sticky;
@@ -100,7 +97,6 @@ textarea:focus-visible,
 .nav-links a:hover { color: var(--gold); }
 .nav-links a:hover::after { transform: scaleX(1); }
 
-
 .nav-check {
   position: absolute;
   opacity: 0;
@@ -127,7 +123,6 @@ textarea:focus-visible,
 .nav-check:checked + .menu-toggle span:nth-child(2) { opacity: 0; }
 .nav-check:checked + .menu-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-
 .hero {
   position: relative;
   overflow: hidden;
@@ -136,7 +131,6 @@ textarea:focus-visible,
   align-items: center;
   padding: 110px 32px;
   color: #ffffff;
-  /* Put your own picture at images/hero.jpg to replace the gradient */
   background:
     linear-gradient(rgba(22, 24, 29, 0.78), rgba(22, 24, 29, 0.78)),
     url('images/hero.jpg') center / cover no-repeat,
@@ -233,7 +227,6 @@ textarea:focus-visible,
   gap: 14px;
 }
 
-
 .hero-text > * {
   animation: rise-in 0.7s ease both;
 }
@@ -272,7 +265,7 @@ textarea:focus-visible,
   overflow: hidden;
   display: grid;
   place-items: center;
-  background-color: #22262e; /* solid dark disc, so only a thin gold ring shows around it */
+  background-color: #22262e;
   font-family: var(--font-head);
   font-size: 56px;
   color: var(--gold);
@@ -321,7 +314,6 @@ textarea:focus-visible,
   transform: translateY(-3px);
 }
 
-
 .section {
   padding: 56px 0;
 }
@@ -353,7 +345,6 @@ textarea:focus-visible,
   margin: 10px auto 0;
 }
 
-
 .about-content {
   max-width: 740px;
   margin: 0 auto;
@@ -364,7 +355,6 @@ textarea:focus-visible,
   margin-bottom: 14px;
   color: var(--muted);
 }
-
 
 .skills-card {
   background-color: var(--paper);
@@ -432,7 +422,6 @@ textarea:focus-visible,
 .lvl-intermediate .skill-bar span { width: 65%; }
 .lvl-advanced .skill-bar span     { width: 90%; }
 
-
 @keyframes bar-fill {
   from { scale: 0 1; }
   to   { scale: 1 1; }
@@ -446,7 +435,6 @@ textarea:focus-visible,
   }
 }
 
-/* other languages strip */
 .skills-more {
   margin-top: 40px;
   padding-top: 32px;
@@ -526,6 +514,11 @@ textarea:focus-visible,
   color: var(--muted);
 }
 
+.education-item .edu-detail {
+  margin-top: 4px;
+  font-weight: 600;
+  color: var(--ink);
+}
 
 .experience-list {
   position: relative;
@@ -533,7 +526,6 @@ textarea:focus-visible,
   margin: 0 auto;
   padding-left: 30px;
 }
-
 
 .experience-list::before {
   content: '';
@@ -556,7 +548,6 @@ textarea:focus-visible,
 }
 
 .experience-item:last-child { margin-bottom: 0; }
-
 
 .experience-item::before {
   content: '';
@@ -633,7 +624,6 @@ textarea:focus-visible,
   color: var(--gold);
 }
 
-
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -655,7 +645,6 @@ textarea:focus-visible,
   border-color: var(--gold);
   box-shadow: 0 14px 28px rgba(22, 24, 29, 0.14);
 }
-
 
 .project-thumb {
   position: relative;
@@ -774,7 +763,6 @@ textarea:focus-visible,
   color: var(--gold);
 }
 
-
 .contact-wrapper {
   display: grid;
   grid-template-columns: 1fr 1.3fr;
@@ -845,7 +833,6 @@ textarea:focus-visible,
 
 .contact-form .btn { align-self: flex-start; }
 
-
 .site-footer {
   background-color: var(--ink);
   color: #b9bcc4;
@@ -857,7 +844,6 @@ textarea:focus-visible,
   max-width: 1100px;
   margin: 0 auto;
 }
-
 
 .footer-cta {
   display: flex;
@@ -884,7 +870,6 @@ textarea:focus-visible,
   line-height: 1.25;
   color: #ffffff;
 }
-
 
 .footer-main {
   display: flex;
@@ -947,7 +932,6 @@ textarea:focus-visible,
   color: var(--ink);
 }
 
-
 .footer-bottom {
   display: flex;
   flex-wrap: wrap;
@@ -966,7 +950,6 @@ textarea:focus-visible,
   .footer-cta { padding: 36px 0; }
   .footer-main { flex-direction: column; }
 }
-
 
 @keyframes rise-in {
   from { opacity: 0; translate: 0 22px; }
@@ -987,7 +970,6 @@ textarea:focus-visible,
   to   { translate: 60px 40px; }
 }
 
-
 @supports (animation-timeline: view()) {
   .reveal {
     animation: rise-in linear both;
@@ -1003,7 +985,6 @@ textarea:focus-visible,
   }
   html { scroll-behavior: auto; }
 }
-
 
 @media (max-width: 900px) {
   .projects-grid { grid-template-columns: repeat(2, 1fr); }
