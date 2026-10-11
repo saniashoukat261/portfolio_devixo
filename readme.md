@@ -33,6 +33,11 @@ devixo-portfolio/
 │   ├── careerly-job-portal.png
 │   ├── car.png              # Velora Drive project
 │   └── artisan-coffee.png   # CopyCoffee project
+├── documents/
+│   ├── sqrock-certificate.jpg
+│   ├── sqrock-recommendation-letter.pdf
+│   ├── virexo-certificate.jpg
+│   └── virexo-recommendation-letter.pdf
 └── README.md
 ```
 
@@ -44,6 +49,7 @@ devixo-portfolio/
 | **About** | Academic background and career interests |
 | **Skills** | Card grid of core skills: HTML5, CSS3, JavaScript, Node.js & Express, MongoDB, Git & GitHub, C++, Python |
 | **Education** | Timeline of academic history (Matriculation → Intermediate → BS Computer Science) |
+| **Experience** | Internship timeline: CodeAlpha (Full Stack), SQRock IT Solutions (Frontend) and Virexo Innovations (Web Development), with role, company and dates; certificates and recommendation letters open from the cards |
 | **Projects** | Six real projects, each with a description, tags, and a live link |
 | **Contact** | Contact form (opens the visitor's email app via `mailto:`) plus email, location, and social links |
 | **Footer** | Four-column footer: short bio with social links, quick links, services, contact details, and a copyright bar |
@@ -53,6 +59,7 @@ devixo-portfolio/
 - A single consistent color palette (dark charcoal + gold accent) used throughout, for a clean, professional look.
 - One serif font for headings and one sans-serif font for body text, kept consistent across all sections.
 - Responsive layout using CSS Grid and Flexbox, with breakpoints at 900px, 700px and 560px for tablet and mobile.
+- A light Experience section with a CSS-only vertical timeline showing the internship history.
 - A CSS-only mobile navigation menu (checkbox toggle).
 - Simple, restrained hover effects on buttons, cards, and links — kept minimal and purposeful rather than decorative.
 - Cards fade in as they scroll into view using CSS scroll-driven animations (`animation-timeline: view()`); browsers without support simply show the cards normally.
