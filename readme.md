@@ -47,7 +47,7 @@ devixo-portfolio/
 |---|---|
 | **Home** | Name, tagline, short intro, and call-to-action buttons |
 | **About** | Academic background and career interests |
-| **Skills** | Card grid of core skills: HTML5, CSS3, JavaScript, Node.js & Express, MongoDB, Git & GitHub, C++, Python |
+| **Skills** | Skill cards with progress bars: Front-End (HTML5, CSS3, JavaScript, Bootstrap), Back-End & Databases (PHP, Node.js, Express.js, MongoDB) and Tools & CMS (Git, GitHub, WordPress), plus chips for Python, C++, C, C#, Dart and SQL |
 | **Education** | Timeline of academic history (Matriculation → Intermediate → BS Computer Science) |
 | **Experience** | Internship timeline: CodeAlpha (Full Stack), SQRock IT Solutions (Frontend) and Virexo Innovations (Web Development), with role, company and dates; certificates and recommendation letters open from the cards |
 | **Projects** | Six real projects, each with a description, tags, and a live link |
