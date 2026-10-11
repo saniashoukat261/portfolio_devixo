@@ -2,7 +2,7 @@
 
 A fully responsive personal portfolio website built as **Task 01** for the DEVIXO Solutions Web Development Internship.
 
-**Live site:** _add your deployed link here once hosted (e.g. GitHub Pages / Netlify / Vercel)_
+**Live site:** (https://portfolio-saniashoukat.vercel.app/)
 
 ---
 
