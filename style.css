@@ -1,15 +1,12 @@
-/* ============================
-   Sania Shoukat - Portfolio
-   Plain HTML5 + CSS3, no frameworks
-   ============================ */
+
 
 :root {
-  --ink: #16181d;        /* dark base */
-  --ink-2: #22262e;      /* raised dark surface */
-  --gold: #c9a24a;       /* accent on dark */
-  --gold-dark: #8a6616;  /* accent text on light */
+  --ink: #16181d;        
+  --ink-2: #22262e;     
+  --gold: #c9a24a;       
+  --gold-dark: #8a6616;  
   --paper: #ffffff;
-  --surface: #f3f3f1;    /* light section background */
+  --surface: #f3f3f1;    
   --line: #e2e2de;
   --text: #23262d;
   --muted: #5d626b;
@@ -48,7 +45,7 @@ textarea:focus-visible,
   outline-offset: 3px;
 }
 
-/* ---------- NAVBAR ---------- */
+
 .site-header {
   position: sticky;
   top: 0;
@@ -103,7 +100,7 @@ textarea:focus-visible,
 .nav-links a:hover { color: var(--gold); }
 .nav-links a:hover::after { transform: scaleX(1); }
 
-/* CSS-only mobile menu */
+
 .nav-check {
   position: absolute;
   opacity: 0;
@@ -130,7 +127,7 @@ textarea:focus-visible,
 .nav-check:checked + .menu-toggle span:nth-child(2) { opacity: 0; }
 .nav-check:checked + .menu-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* ---------- HERO ---------- */
+
 .hero {
   position: relative;
   overflow: hidden;
@@ -146,7 +143,6 @@ textarea:focus-visible,
     linear-gradient(135deg, #16181d 0%, #23262d 60%, #3a3220 100%);
 }
 
-/* slow drifting glows */
 .hero::before,
 .hero::after {
   content: '';
@@ -187,23 +183,41 @@ textarea:focus-visible,
 }
 
 .hero-hello {
+  display: flex;
+  align-items: center;
+  gap: 14px;
   color: var(--gold);
-  font-size: 19px;
-  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.hero-hello::before {
+  content: '';
+  width: 36px;
+  height: 2px;
+  background-color: var(--gold);
 }
 
 .hero h1 {
   font-family: var(--font-head);
-  font-size: 66px;
+  font-size: clamp(30px, 4.2vw, 46px);
+  text-wrap: balance;
   line-height: 1.12;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
   color: #ffffff;
 }
 
+.hero h1 .accent { color: var(--gold); }
+
 .tagline {
+  font-family: var(--font-head);
+  font-style: italic;
   font-size: 22px;
   color: #e5e6ea;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .hero-intro {
@@ -219,7 +233,7 @@ textarea:focus-visible,
   gap: 14px;
 }
 
-/* entrance animation: runs once on page load */
+
 .hero-text > * {
   animation: rise-in 0.7s ease both;
 }
@@ -228,7 +242,6 @@ textarea:focus-visible,
 .hero-text > :nth-child(4) { animation-delay: 0.3s; }
 .hero-text > :nth-child(5) { animation-delay: 0.4s; }
 
-/* profile picture with spinning ring */
 .profile-frame {
   position: relative;
   width: 280px;
@@ -236,6 +249,7 @@ textarea:focus-visible,
   justify-self: center;
   display: grid;
   place-items: center;
+  isolation: isolate;
   animation: float 6s ease-in-out infinite;
 }
 
@@ -244,25 +258,26 @@ textarea:focus-visible,
   position: absolute;
   inset: 0;
   border-radius: 50%;
+  z-index: 0;
   background: conic-gradient(var(--gold), transparent 45%, var(--gold));
   animation: spin 8s linear infinite;
 }
 
 .profile-photo {
   position: relative;
+  z-index: 1;
   width: calc(100% - 12px);
   aspect-ratio: 1;
   border-radius: 50%;
   overflow: hidden;
   display: grid;
   place-items: center;
-  background-color: var(--ink-2);
+  background-color: #22262e; /* solid dark disc, so only a thin gold ring shows around it */
   font-family: var(--font-head);
   font-size: 56px;
   color: var(--gold);
 }
 
-/* the photo sits on top of the initials; if the file is missing, initials show */
 .profile-photo::after {
   content: '';
   position: absolute;
@@ -270,7 +285,6 @@ textarea:focus-visible,
   background: url('images/profile.jpg') center / cover no-repeat;
 }
 
-/* ---------- BUTTONS ---------- */
 .btn {
   display: inline-block;
   padding: 13px 30px;
@@ -307,7 +321,7 @@ textarea:focus-visible,
   transform: translateY(-3px);
 }
 
-/* ---------- SECTIONS ---------- */
+
 .section {
   padding: 56px 0;
 }
@@ -339,7 +353,7 @@ textarea:focus-visible,
   margin: 10px auto 0;
 }
 
-/* ---------- ABOUT ---------- */
+
 .about-content {
   max-width: 740px;
   margin: 0 auto;
@@ -351,7 +365,7 @@ textarea:focus-visible,
   color: var(--muted);
 }
 
-/* ---------- SKILLS ---------- */
+
 .skills-card {
   background-color: var(--paper);
   border: 1px solid var(--line);
@@ -418,7 +432,7 @@ textarea:focus-visible,
 .lvl-intermediate .skill-bar span { width: 65%; }
 .lvl-advanced .skill-bar span     { width: 90%; }
 
-/* bars fill as they scroll into view (supported browsers only) */
+
 @keyframes bar-fill {
   from { scale: 0 1; }
   to   { scale: 1 1; }
@@ -475,7 +489,6 @@ textarea:focus-visible,
   .skills-columns { grid-template-columns: 1fr; }
 }
 
-/* ---------- EDUCATION ---------- */
 .education-list {
   max-width: 740px;
   margin: 0 auto;
@@ -513,7 +526,114 @@ textarea:focus-visible,
   color: var(--muted);
 }
 
-/* ---------- PROJECTS ---------- */
+
+.experience-list {
+  position: relative;
+  max-width: 740px;
+  margin: 0 auto;
+  padding-left: 30px;
+}
+
+
+.experience-list::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background-color: rgba(201, 162, 74, 0.5);
+}
+
+.experience-item {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 20px 22px;
+  background-color: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-item:last-child { margin-bottom: 0; }
+
+
+.experience-item::before {
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: 26px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--gold);
+  box-shadow: 0 0 0 4px var(--surface);
+}
+
+.experience-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+  box-shadow: 0 12px 24px rgba(22, 24, 29, 0.12);
+}
+
+.exp-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4px 16px;
+}
+
+.exp-head h3 {
+  font-family: var(--font-head);
+  font-size: 19px;
+  color: var(--ink);
+}
+
+.exp-date {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gold-dark);
+}
+
+.exp-company {
+  margin: 2px 0 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.exp-desc {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.exp-tags a {
+  display: inline-block;
+  padding: 4px 14px;
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink);
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.exp-tags a:hover {
+  background-color: var(--ink);
+  border-color: var(--ink);
+  color: var(--gold);
+}
+
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -536,7 +656,7 @@ textarea:focus-visible,
   box-shadow: 0 14px 28px rgba(22, 24, 29, 0.14);
 }
 
-/* thumbnail: real screenshot on top, dark gradient + name as fallback */
+
 .project-thumb {
   position: relative;
   height: 140px;
@@ -654,7 +774,7 @@ textarea:focus-visible,
   color: var(--gold);
 }
 
-/* ---------- CONTACT ---------- */
+
 .contact-wrapper {
   display: grid;
   grid-template-columns: 1fr 1.3fr;
@@ -725,7 +845,7 @@ textarea:focus-visible,
 
 .contact-form .btn { align-self: flex-start; }
 
-/* ---------- FOOTER ---------- */
+
 .site-footer {
   background-color: var(--ink);
   color: #b9bcc4;
@@ -738,7 +858,7 @@ textarea:focus-visible,
   margin: 0 auto;
 }
 
-/* call-to-action strip */
+
 .footer-cta {
   display: flex;
   flex-wrap: wrap;
@@ -765,7 +885,7 @@ textarea:focus-visible,
   color: #ffffff;
 }
 
-/* main row */
+
 .footer-main {
   display: flex;
   flex-wrap: wrap;
@@ -827,7 +947,7 @@ textarea:focus-visible,
   color: var(--ink);
 }
 
-/* bottom bar */
+
 .footer-bottom {
   display: flex;
   flex-wrap: wrap;
@@ -847,7 +967,7 @@ textarea:focus-visible,
   .footer-main { flex-direction: column; }
 }
 
-/* ---------- ANIMATIONS ---------- */
+
 @keyframes rise-in {
   from { opacity: 0; translate: 0 22px; }
   to   { opacity: 1; translate: 0 0; }
@@ -867,7 +987,7 @@ textarea:focus-visible,
   to   { translate: 60px 40px; }
 }
 
-/* cards fade in as they scroll into view (supported browsers only) */
+
 @supports (animation-timeline: view()) {
   .reveal {
     animation: rise-in linear both;
@@ -884,7 +1004,7 @@ textarea:focus-visible,
   html { scroll-behavior: auto; }
 }
 
-/* ---------- RESPONSIVE ---------- */
+
 @media (max-width: 900px) {
   .projects-grid { grid-template-columns: repeat(2, 1fr); }
 
@@ -908,7 +1028,7 @@ textarea:focus-visible,
     transition: max-height 0.3s ease;
   }
 
-  .nav-check:checked ~ .nav-links { max-height: 320px; }
+  .nav-check:checked ~ .nav-links { max-height: 400px; }
 
   .nav-links a {
     display: block;
@@ -941,4 +1061,9 @@ textarea:focus-visible,
 
 @media (max-width: 560px) {
   .projects-grid { grid-template-columns: 1fr; }
+
+  .experience-list { padding-left: 24px; }
+  .experience-list::before { left: 3px; }
+  .experience-item { padding: 18px 16px; }
+  .experience-item::before { left: -24px; top: 24px; }
 }
